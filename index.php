@@ -20,9 +20,14 @@
                             <label for="paragraph">Paragrafo</label>
                             <textarea name="paragraph" class="form-control" placeholder="Scrivi qui un messaggio" id="paragraph"></textarea>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 d-flex flex-column justify-content-center">
                             <label for="badword">Parola da censurare nel paragrafo</label>
-                            <input class="form-control w-50" type="text" name="badword" id="badword">
+                            <input class="form-control w-50" type="text" name="badword" id="badword" placeholder="Scrivi la parola da censurare">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center mt-4">
+                            <button type="submit" class="btn btn-md btn-primary">Invia dati</button>
                         </div>
                     </div>
                 </form>
