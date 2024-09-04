@@ -2,6 +2,8 @@
     $paragraph = $_GET['paragraph'];
     $badword = $_GET['badword'];
     $paragraphLen = strlen($paragraph);
+    $wordCensored = str_replace($badword, '***', $paragraph);
+    $censoredLen = strlen($wordCensored);
 ?>
 
 
@@ -18,13 +20,15 @@
         <div class="row">
             <div class="col-12 mb-5">
                 <h2 class="text-center fw-bold">Paragrafo con la lunghezza</h2>
-                <p class="text-center fs-3"><span class="fw-bold">Paragrafo:</span> <?php echo $paragraph ?> </p>
-                <p class="text-center fs-3"><span class="fw-bold">Lunghezza paragrafo:</span> <?php echo $paragraphLen ?> </p>
+                <p class="fs-3"><span class="fw-bold">Paragrafo:</span> <?php echo $paragraph ?> </p>
+                <p class="fs-3"><span class="fw-bold">Lunghezza paragrafo:</span> <?php echo $paragraphLen ?> </p>
             </div>
         </div>
         <div class="row">
             <div class="col-12 mt-5">
                 <h2 class="text-center fw-bold">Paragrafo con anche la parola censurata</h2>
+                <p class="fs-3"><span class="fw-bold">Paragrafo censurato:</span> <?php echo $wordCensored ?> </p>
+                <p class="fs-3"><span class="fw-bold">Lunghezza paragrafo censurato:</span> <?php echo $censoredLen ?> </p>
             </div>
         </div>
     </div>
